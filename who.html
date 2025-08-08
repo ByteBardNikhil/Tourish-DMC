@@ -4,151 +4,113 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Team</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      section {
+        padding: 40px 20px;
+        max-width: 1100px;
+        margin: auto;
+        text-align: center;
+      }
+      h2 {
+        margin-bottom: 10px;
+        font-size: 26px;
+      }
+      .subtitle {
+        color: gray;
+        font-size: 14px;
+        margin-bottom: 40px;
+      }
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 30px;
+      }
+      .member {
+        text-align: center;
+      }
+      .member img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 10px;
+      }
+      .name {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .role {
+        color: #555;
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+      .contact {
+        font-size: 12px;
+        color: #777;
+      }
+    </style>
   </head>
   <body>
-    <section id="who" style="margin-top: 22px">
-      <div class="container who">
-        <div style="flex: 1">
-          <h2>Our Team</h2>
-          <p style="color: var(--muted)">
-            A destination management company focused on curated experiences,
-            reliable ground services and partner-first tools for travel agents.
-          </p>
-          <ul style="color: var(--muted)">
-            <li>Local teams across popular destinations</li>
-            <li>Transparent pricing and partner dashboard</li>
-            <li>24/7 operations and contingency plans</li>
-          </ul>
-        </div>
-        <p></p>
-        <div style="width: 320px; border-radius: 12px; overflow: hidden">
+    <section>
+      <h2>MEET OUR EXCLUSIVE TEAM</h2>
+      <p class="subtitle">“Supporting Your Journey, Every Step of the Way”</p>
+
+      <div class="team-grid">
+        <div class="member">
           <img
-            id="teamImg"
-            src="https://images.unsplash.com/photo-1493558103817-58b2924bce98?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=1"
-            alt="team"
-            style="width: 100%; height: 220px; object-fit: cover"
+            src="https://static.wixstatic.com/media/7b5983_3695a66cf9f9401da8fd49060182b265~mv2.jpg/v1/crop/x_0,y_0,w_388,h_389/fill/w_216,h_217,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/WhatsApp%20Image%202023-04-13%20at%2017_14_52.jpg"
+            alt="Narendra Singh"
           />
+          <div class="name">Narendra Singh</div>
+          <div class="role">Co-Founder & CEO</div>
+          <div class="contact">+91 1234567890<br />narendra@example.com</div>
+        </div>
+
+        <div class="member">
+          <img
+            src="https://static.wixstatic.com/media/7b5983_541f60e791804d5d89e38ff7ae6eac0c~mv2.jpg/v1/crop/x_0,y_0,w_1024,h_1029/fill/w_216,h_217,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/WhatsApp%20Image%202023-04-27%20at%2020_05_22.jpg"
+            alt="Vikas Kumar"
+          />
+          <div class="name">Vikas Kumar</div>
+          <div class="role">Founder & CMO</div>
+          <div class="contact">+91 9876543210<br />vikas@example.com</div>
+        </div>
+
+        <div class="member">
+          <img
+            src="https://static.wixstatic.com/media/7b5983_50aee9459e944837b0fbb2289cccf12f~mv2.jpg/v1/fill/w_216,h_217,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/WhatsApp%20Image%202023-04-13%20at%2017_14_edited.jpg"
+            alt="Daleipoti Do"
+          />
+          <div class="name">Daleipoti Do</div>
+          <div class="role">Head of Operations</div>
+          <div class="contact">+91 9988776655<br />dalei@example.com</div>
+        </div>
+
+        <div class="member">
+          <img
+            src="https://static.wixstatic.com/media/53a394_a1dcbbfeac7c40bc84f3b2b531b5eb4f~mv2.jpg/v1/fill/w_216,h_217,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/WhatsApp%20Image%202023-11-09%20at%2012_28_16_3e6c5ab6.jpg"
+            alt="Shyam Patel"
+          />
+          <div class="name">Shyam Patel</div>
+          <div class="role">Destination Expert</div>
+          <div class="contact">+91 1122334455<br />shyam@example.com</div>
+        </div>
+
+        <div class="member">
+          <img
+            src="https://static.wixstatic.com/media/53a394_372048c6972b4429adfd09a75d3e60e7~mv2.jpg/v1/fill/w_216,h_217,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/swati%20singh%20tourish%20dmc.jpg"
+            alt="Swati Singh"
+          />
+          <div class="name">Swati Singh</div>
+          <div class="role">Admin & Accounts</div>
+          <div class="contact">+91 6677889900<br />swati@example.com</div>
         </div>
       </div>
     </section>
-
-    <!-- Modal (created for image preview) -->
-    <div id="imgModal" aria-hidden="true"></div>
-
-    <script>
-      // ====== Layout via inline styles (no external CSS) ======
-      (function () {
-        // root variables fallback
-        const root = document.documentElement;
-        if (!root.style.getPropertyValue("--muted")) {
-          root.style.setProperty("--muted", "#6b7280"); // gray fallback
-        }
-
-        const mainContainer = document.querySelector(".container.who");
-        if (mainContainer) {
-          mainContainer.style.display = "flex";
-          mainContainer.style.alignItems = "flex-start";
-          mainContainer.style.gap = "18px";
-          mainContainer.style.maxWidth = "1100px";
-          mainContainer.style.margin = "0 auto";
-          mainContainer.style.padding = "0 12px";
-        }
-
-        // make h2 and paragraph spacing consistent
-        const h2 = mainContainer.querySelector("h2");
-        if (h2) {
-          h2.style.margin = "0 0 8px 0";
-          h2.style.fontSize = "22px";
-        }
-        const p = mainContainer.querySelector("p");
-        if (p) p.style.margin = "0 0 12px 0";
-
-        // responsive: convert to column on small screens
-        function applyResponsive() {
-          if (window.innerWidth <= 640) {
-            mainContainer.style.flexDirection = "column";
-            const right = mainContainer.querySelector(
-              'div[style*="width: 320px"]'
-            );
-            if (right) {
-              right.style.width = "100%";
-            }
-          } else {
-            mainContainer.style.flexDirection = "row";
-            const right = mainContainer.querySelector(
-              'div[style*="width: 320px"]'
-            );
-            if (right) {
-              right.style.width = "320px";
-            }
-          }
-        }
-        window.addEventListener("resize", applyResponsive);
-        applyResponsive();
-      })();
-
-      // ====== Image modal preview (no CSS file) ======
-      (function () {
-        const img = document.getElementById("teamImg");
-        const modal = document.getElementById("imgModal");
-
-        // modal base styles
-        Object.assign(modal.style, {
-          position: "fixed",
-          inset: "0",
-          display: "none",
-          alignItems: "center",
-          justifyContent: "center",
-          background: "rgba(0,0,0,0.7)",
-          zIndex: "9999",
-        });
-
-        // inner image container
-        const modalContent = document.createElement("div");
-        Object.assign(modalContent.style, {
-          maxWidth: "90%",
-          maxHeight: "90%",
-          borderRadius: "10px",
-          overflow: "hidden",
-          boxShadow: "0 8px 30px rgba(0,0,0,0.5)",
-        });
-
-        const modalImg = document.createElement("img");
-        Object.assign(modalImg.style, {
-          width: "100%",
-          height: "auto",
-          display: "block",
-        });
-
-        modalContent.appendChild(modalImg);
-        modal.appendChild(modalContent);
-        document.body.appendChild(modal);
-
-        // open modal on image click
-        img.addEventListener("click", function () {
-          modalImg.src = img.src;
-          modal.style.display = "flex";
-          modal.setAttribute("aria-hidden", "false");
-          // lock scroll
-          document.body.style.overflow = "hidden";
-        });
-
-        // close modal on click outside image or pressing ESC
-        modal.addEventListener("click", function (e) {
-          if (e.target === modal || e.target === modalImg) {
-            modal.style.display = "none";
-            modal.setAttribute("aria-hidden", "true");
-            document.body.style.overflow = "";
-          }
-        });
-        window.addEventListener("keydown", function (e) {
-          if (e.key === "Escape" && modal.style.display === "flex") {
-            modal.style.display = "none";
-            modal.setAttribute("aria-hidden", "true");
-            document.body.style.overflow = "";
-          }
-        });
-      })();
-    </script>
   </body>
 </html>

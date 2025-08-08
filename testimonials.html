@@ -3,26 +3,105 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Testimonial</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Testimonials</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      #testimonials {
+        padding: 40px 20px;
+        background: #f9f9f9;
+      }
+      #testimonials h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 30px;
+        color: #333;
+      }
+      .testimonial-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        max-width: 1100px;
+        margin: auto;
+      }
+      .testimonial-card {
+        background: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .testimonial-card img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 15px;
+      }
+      .testimonial-card p {
+        font-style: italic;
+        font-size: 0.95rem;
+        color: #555;
+      }
+      .testimonial-card h4 {
+        margin-top: 15px;
+        font-size: 1.1rem;
+        color: #222;
+      }
+      .testimonial-card span {
+        font-size: 0.9rem;
+        color: #777;
+      }
+    </style>
   </head>
   <body>
     <section id="testimonials" style="margin-top: 22px">
       <div class="container">
-        <h2>Testimonials</h2>
-        <div
-          style="
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 12px;
-            margin-top: 12px;
-          "
-        >
-          <div class="card">
-            "Seamless service from request to return." — Priya
+        <h2>What Our Partners Say</h2>
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <img
+              src="https://randomuser.me/api/portraits/women/44.jpg"
+              alt="Priya"
+            />
+            <p>
+              "Seamless service from request to return. They ensured our group
+              trip was unforgettable with smooth transfers and excellent hotel
+              deals."
+            </p>
+            <h4>Priya Sharma</h4>
+            <span>Travel Agency Owner</span>
           </div>
-          <div class="card">"Great rates and local knowledge." — Arjun</div>
-          <div class="card">"Reliable partner for our events." — MICE Co.</div>
+          <div class="testimonial-card">
+            <img
+              src="https://randomuser.me/api/portraits/men/36.jpg"
+              alt="Arjun"
+            />
+            <p>
+              "Great rates, insider local knowledge, and 24/7 support. They made
+              our Rajasthan tour an absolute success."
+            </p>
+            <h4>Arjun Mehta</h4>
+            <span>Corporate Travel Planner</span>
+          </div>
+          <div class="testimonial-card">
+            <img
+              src="https://randomuser.me/api/portraits/men/76.jpg"
+              alt="MICE Co."
+            />
+            <p>
+              "Reliable partner for our events. From venue selection to
+              logistics, their DMC expertise saved us both time and money."
+            </p>
+            <h4>MICE Co.</h4>
+            <span>Event Management Firm</span>
+          </div>
         </div>
       </div>
     </section>
