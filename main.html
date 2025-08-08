@@ -10,7 +10,11 @@
     <div class="main-container">
       <header>
         <div class="brand">
-          <div class="logo">DMC</div>
+          <div class="logo">
+            <img
+              src="https://sdmntpreastus.oaiusercontent.com/files/00000000-db2c-61f9-a94d-106ce67f4140/raw?se=2025-08-08T18%3A19%3A12Z&sp=r&sv=2024-08-04&sr=b&scid=ccf9d891-a150-5cb6-badf-24d924c938fe&skoid=31bc9c1a-c7e0-460a-8671-bf4a3c419305&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-08T12%3A55%3A14Z&ske=2025-08-09T12%3A55%3A14Z&sks=b&skv=2024-08-04&sig=yuMR/l8SeGIvQG/hSdu1sh/4HedfLJE8TqaUeFQOct4%3D"
+            />
+          </div>
           <div style="line-height: 1">
             <div style="font-weight: 300">Tourish DMC</div>
           </div>
@@ -32,6 +36,7 @@
         </nav>
         <button class="hamburger" id="menuBtn">☰</button>
       </header>
+
       <main id="home">
         <section
           class="hero"
@@ -45,8 +50,7 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
           "
         >
-          <!-- SEARCH -->
-          <div
+          <!-- <div
             class="hero-card"
             style="
               background: rgba(0, 0, 0, 0.6);
@@ -64,79 +68,9 @@
                 justify-content: center;
                 align-items: center;
               "
-            >
-              <img
-                src="https://static.wixstatic.com/media/03b5ce_524cd79eb75c490680bd6bde93e58915~mv2.png/v1/fill/w_176,h_56,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Tourish_DMC_Logo-removebg-preview.png"
-                style="
-                  height: 40px;
-                  background: white;
-                  padding: 4px;
-                  border-radius: 4px;
-                "
-              />
-              <input
-                class="input"
-                placeholder="Where to?"
-                style="
-                  padding: 8px 10px;
-                  border: 1px solid #ccc;
-                  border-radius: 4px;
-                  flex: 1;
-                  min-width: 150px;
-                "
-              />
-              <select
-                class="input"
-                style="
-                  padding: 8px 10px;
-                  border: 1px solid #ccc;
-                  border-radius: 4px;
-                "
-              >
-                <option>1 Traveller</option>
-                <option>2 Travellers</option>
-              </select>
-              <button
-                class="btn"
-                style="
-                  background: #ff9800;
-                  color: white;
-                  padding: 8px 14px;
-                  border: none;
-                  border-radius: 4px;
-                  cursor: pointer;
-                "
-              >
-                Search
-              </button>
-            </div>
+            ></div>
+          </div> -->
 
-            <!-- MINI STATS -->
-            <div
-              class="mini-stats"
-              style="
-                display: flex;
-                justify-content: center;
-                gap: 30px;
-                margin-top: 20px;
-              "
-            >
-              <div class="stat" style="text-align: center">
-                <div style="font-weight: 800; font-size: 18px">500+</div>
-                <div style="font-size: 12px; color: #ddd">Tours</div>
-              </div>
-              <div class="stat" style="text-align: center">
-                <div style="font-weight: 800; font-size: 18px">120</div>
-                <div style="font-size: 12px; color: #ddd">Partners</div>
-              </div>
-              <div class="stat" style="text-align: center">
-                <div style="font-weight: 800; font-size: 18px">24/7</div>
-                <div style="font-size: 12px; color: #ddd">Support</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- DESCRIPTION -->
           <p
             style="
               margin-top: 20px;
@@ -150,16 +84,28 @@
           >
             Tourish DMC is a Destination Management Company engaged in Domestic
             & International Tourism. We are serving B2B segment of the travel
-            and tourism industry. Our passionate team is committed to delivering
-            world-class travel experiences through expertise, innovation, and
-            quality service.
+            and tourism industry. We are a group of passionate professionals who
+            are driven by customer-centric approach. We are committed to deliver
+            a quality experience to the travellers, our Industry Partners, and
+            associates. We aspire to be one of the most trusted DMC brands
+            across the globe with best-in-class service matching world class
+            standards, industry expertise, designing evaluative products, and a
+            committed team who ensures a wow experience to Customers, Trade
+            Partners, Employees, and Investors. Tourish DMC product portfolio
+            consists of Leisure FIT, Leisure Groups and MICE and more to come.
+            Right from offering an exciting bouquet of packages, we offer the
+            complete set of services across the DMC value chain. ​ We have a
+            dedicated and highly motivated team of professionals, who are
+            service-oriented and always ready to walk the extra
           </p>
         </section>
       </main>
+
       <footer>
         <div>© 2025 Tourish-DMC • All rights reserved</div>
       </footer>
     </div>
+
     <div class="modal" id="modal">
       <div class="modal-card">
         <div
@@ -193,48 +139,81 @@
         </div>
       </div>
     </div>
+
     <script>
       const menuBtn = document.getElementById("menuBtn");
       const nav = document.querySelector("nav");
+
       menuBtn.addEventListener("click", () => {
         nav.style.display = nav.style.display === "flex" ? "none" : "flex";
       });
+
       document.querySelectorAll(".tab").forEach((btn) => {
-        btn.addEventListener("click", (e) => {
+        btn.addEventListener("click", () => {
           document
             .querySelectorAll(".tab")
             .forEach((t) => t.classList.remove("active"));
           btn.classList.add("active");
           const t = btn.getAttribute("data-target");
+
           if (t === "intl") {
-            document.getElementById(
-              "cards"
-            ).innerHTML = `<div class="card"><div style="font-weight:800">Malaysia Discovery</div><div style="color:var(--muted);margin-top:6px">4 nights • Kuala Lumpur • Beaches</div></div><div class="card"><div style="font-weight:800">UAE Highlights</div><div style="color:var(--muted);margin-top:6px">Dubai • Abu Dhabi • Desert Safari</div></div>`;
+            document.getElementById("cards").innerHTML = `
+            <div class="card">
+              <div style="font-weight:800">Malaysia Discovery</div>
+              <div style="color:var(--muted);margin-top:6px">4 nights • Kuala Lumpur • Beaches</div>
+            </div>
+            <div class="card">
+              <div style="font-weight:800">UAE Highlights</div>
+              <div style="color:var(--muted);margin-top:6px">Dubai • Abu Dhabi • Desert Safari</div>
+            </div>`;
           } else {
-            document.getElementById(
-              "cards"
-            ).innerHTML = `<div class="card"><div style="font-weight:800">Summer Escape — Goa</div><div style="color:var(--muted);margin-top:6px">3 nights • Hotels • Meals • Transfers</div></div><div class="card"><div style="font-weight:800">Hill Retreat — Manali</div><div style="color:var(--muted);margin-top:6px">4 nights • Adventure • Guide</div></div>`;
+            document.getElementById("cards").innerHTML = `
+            <div class="card">
+              <div style="font-weight:800">Summer Escape — Goa</div>
+              <div style="color:var(--muted);margin-top:6px">3 nights • Hotels • Meals • Transfers</div>
+            </div>
+            <div class="card">
+              <div style="font-weight:800">Hill Retreat — Manali</div>
+              <div style="color:var(--muted);margin-top:6px">4 nights • Adventure • Guide</div>
+            </div>`;
           }
         });
       });
+
       const modal = document.getElementById("modal");
       const openLogin = document.getElementById("openLogin");
       const openSignup = document.getElementById("openSignup");
       const closeModal = document.getElementById("closeModal");
+
       openLogin.addEventListener("click", () => {
         document.getElementById("modalTitle").textContent = "Partner Login";
         modal.classList.add("open");
       });
+
       openSignup.addEventListener("click", () => {
         document.getElementById("modalTitle").textContent = "Partner Sign up";
         modal.classList.add("open");
-        document.getElementById(
-          "modalBody"
-        ).innerHTML = `<form id="signupForm"><div class="form-row"><input class="input" placeholder="Company name" required></div><div class="form-row"><input class="input" placeholder="Contact email" required></div><div class="form-row"><input class="input" placeholder="Phone" required></div><div style="display:flex;gap:8px;justify-content:flex-end"><button class="btn" type="submit">Sign up</button></div></form>`;
+        document.getElementById("modalBody").innerHTML = `
+        <form id="signupForm">
+          <div class="form-row">
+            <input class="input" placeholder="Company name" required>
+          </div>
+          <div class="form-row">
+            <input class="input" placeholder="Contact email" required>
+          </div>
+          <div class="form-row">
+            <input class="input" placeholder="Phone" required>
+          </div>
+          <div style="display:flex;gap:8px;justify-content:flex-end">
+            <button class="btn" type="submit">Sign up</button>
+          </div>
+        </form>`;
       });
+
       closeModal.addEventListener("click", () => {
         modal.classList.remove("open");
       });
+
       document.getElementById("loginForm").addEventListener("submit", (e) => {
         e.preventDefault();
         modal.classList.remove("open");
