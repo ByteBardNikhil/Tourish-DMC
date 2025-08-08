@@ -4,7 +4,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portal</title>
-    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="portal">
+      <div style="font-weight: 800; margin-bottom: 8px">
+        Travel Agent Portal
+      </div>
+      <div style="display: flex; gap: 8px; margin-bottom: 10px">
+        <button class="tab" id="openSignup">Partner Sign up</button>
+        <button class="tab" id="openLogin">Partner Login</button>
+      </div>
+      <div style="color: var(--muted); font-size: 13px">
+        Partner tools, APIs and rates in one place.
+      </div>
+    </div>
+
+    <div
+      id="modal"
+      style="
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      "
+    >
+      <div
+        id="modalContent"
+        style="
+          background: #fff;
+          padding: 20px;
+          border-radius: 8px;
+          max-width: 300px;
+          width: 100%;
+        "
+      ></div>
+    </div>
+
+    <script>
+      const modal = document.getElementById("modal");
+      const modalContent = document.getElementById("modalContent");
+      document.getElementById("openSignup").onclick = () => {
+        modalContent.innerHTML =
+          '<h3>Partner Sign up</h3><input placeholder="Email" style="width:100%;margin-bottom:8px;"><br><input placeholder="Password" type="password" style="width:100%;margin-bottom:8px;"><br><button style="width:100%;">Sign up</button>';
+        modal.style.display = "flex";
+      };
+      document.getElementById("openLogin").onclick = () => {
+        modalContent.innerHTML =
+          '<h3>Partner Login</h3><input placeholder="Email" style="width:100%;margin-bottom:8px;"><br><input placeholder="Password" type="password" style="width:100%;margin-bottom:8px;"><br><button style="width:100%;">Login</button>';
+        modal.style.display = "flex";
+      };
+      modal.onclick = (e) => {
+        if (e.target === modal) modal.style.display = "none";
+      };
+    </script>
+  </body>
 </html>

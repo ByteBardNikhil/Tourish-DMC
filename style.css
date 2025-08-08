@@ -163,8 +163,13 @@ select {
 }
 .packages {
   display: grid;
-  grid-template-columns: 1fr 320px;
+  grid-template-columns: auto;
   gap: 3rem;
+  text-align: center;
+}
+.packages img {
+  width: 200px;
+  height: 200px;
 }
 .tabs {
   display: flex;
