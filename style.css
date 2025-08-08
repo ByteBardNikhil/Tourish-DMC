@@ -60,11 +60,11 @@ nav {
   align-items: center;
 }
 .nav-link {
-  color: var(--muted);
+  color: black;
   text-decoration: none;
   padding: 8px 10px;
   border-radius: 8px;
-  font-weight: 600;
+  font-weight: 200;
 }
 .nav-link:hover {
   color: #020101;
@@ -90,18 +90,27 @@ main {
   padding: 20px 0;
 }
 .hero {
-  display: grid;
-  grid-template-columns: 1fr 420px;
   gap: 28px;
   align-items: center;
 }
 .hero-card {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
-
+  position: relative;
   padding: 28px;
   border-radius: 14px;
   backdrop-filter: blur(6px);
-  box-shadow: 0 6px 30px rgba(2, 6, 23, 0.6);
+
+  height: 80vh;
+}
+
+.hero-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0.1, 0.1);
+  border-radius: 14px;
+}
+.hero-card p {
+  padding: 20px;
 }
 .eyebrow {
   color: var(--accent);
