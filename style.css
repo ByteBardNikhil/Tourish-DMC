@@ -2,7 +2,7 @@
   --bg: #0f1724;
   --card: #85878b;
   --accent: #06b6d4;
-  --muted: #94a3b8;
+  --muted: #171819;
   --glass: rgba(255, 255, 255, 0.03);
 }
 
@@ -54,10 +54,12 @@ nav {
   font-weight: 200;
 }
 .nav-link:hover {
-  color: #020101;
-  background: var(--glass);
+  background-color: black;
+  color: white;
   transform: scale(1.1);
+  transition: 0.4s;
 }
+
 .cta {
   background: linear-gradient(90deg, var(--accent), #7c3aed);
   padding: 10px 14px;
@@ -79,14 +81,13 @@ main {
 .hero {
   gap: 28px;
   align-items: center;
+  height: 50vh;
 }
 .hero-card {
   position: relative;
   padding: 28px;
   border-radius: 14px;
   backdrop-filter: blur(6px);
-
-  height: 80vh;
 }
 
 .hero-card::before {
@@ -151,9 +152,13 @@ select {
 }
 .services {
   grid-template-columns: repeat(3, 1fr);
-  background-color: grey;
+  background: rgba(0, 0, 0, 0.8);
+
   padding: 10px;
   border-radius: 10px;
+}
+.service-item > div:first-of-type {
+  color: white;
 }
 
 .packages {
@@ -183,9 +188,10 @@ select {
   cursor: pointer;
 }
 .tab.active {
-  background: linear-gradient(90deg, bla, #373638);
+  background: linear-gradient(90deg, black, #373638);
   color: white;
   border: 0;
+  transition: 1s;
 }
 .cards {
   display: grid;
