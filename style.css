@@ -7,11 +7,7 @@
 }
 
 body {
-  margin: 0;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto,
-    "Helvetica Neue", Arial;
   background: #a18267;
-  height: 100vh;
 }
 .container {
   max-width: 1100px;
@@ -35,23 +31,15 @@ header {
   align-items: center;
   gap: 12px;
 }
-.logo {
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, var(--accent), #585066);
-  display: grid;
-  place-items: center;
-  font-weight: 700;
-  color: #021025;
-}
+
 .logo:hover {
   transform: scale(1.1);
 }
 
 .logo img {
-  width: 50px;
-  height: 50px;
+  width: 150px;
+  height: 90px;
+  object-fit: contain;
 }
 nav {
   display: flex;
@@ -163,12 +151,11 @@ select {
 }
 .services {
   grid-template-columns: repeat(3, 1fr);
+  background-color: grey;
+  padding: 10px;
+  border-radius: 10px;
 }
-.service-item {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
-  padding: 18px;
-  border-radius: 12px;
-}
+
 .packages {
   display: grid;
   grid-template-columns: auto;
@@ -178,6 +165,10 @@ select {
 .packages img {
   width: 200px;
   height: 200px;
+  border-radius: 10px;
+  object-fit: fill;
+  border: 1px solid rgb(75, 74, 74);
+  box-shadow: 2px 2px 8px rgb(87, 76, 76);
 }
 .tabs {
   display: flex;
@@ -192,8 +183,8 @@ select {
   cursor: pointer;
 }
 .tab.active {
-  background: linear-gradient(90deg, var(--accent), #7c3aed);
-  color: #021025;
+  background: linear-gradient(90deg, bla, #373638);
+  color: white;
   border: 0;
 }
 .cards {
@@ -223,9 +214,9 @@ select {
   border-radius: 8px;
 }
 footer {
-  margin-top: 30px;
-  padding: 18px 0;
-  color: var(--muted);
+  position: fixed;
+  bottom: 0;
+
   text-align: center;
 }
 @media (max-width: 980px) {
@@ -305,10 +296,4 @@ footer {
   border: 0;
   color: var(--muted);
   font-weight: 700;
-}
-.main-container {
-  width: 90vw;
-  height: 100vh;
-  margin: auto;
-  margin-top: 2rem;
 }
